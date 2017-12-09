@@ -18,6 +18,9 @@ def index(request):
 def detail(request, pk):
     """post detail"""
     post = get_object_or_404(Post, pk=pk)
+
+    post.increase_views()
+    
     post.body = markdown.markdown(post.body, extensions=[
         'markdown.extensions.extra',
         'markdown.extensions.codehilite',
