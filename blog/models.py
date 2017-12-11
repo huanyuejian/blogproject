@@ -96,7 +96,7 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         """复写save 从正文里面摘取摘要保存到摘要字段里"""
         if not self.excerpt:
-            md = markdown.Markdown(extensions[
+            md = markdown.Markdown(extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
             ])
