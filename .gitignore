@@ -3,4 +3,5 @@ fabfile.py
 fabfile.pyc
 blog/__pycache__
 blogproject/__pycache__
+blog/templatetags/__pycache__
 comments/__pycache__
