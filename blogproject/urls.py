@@ -24,4 +24,7 @@ urlpatterns = [
     url(r'^all/rss/$',
         AllPostsRssFeed(), name='rss'
         ),
+    url(r'^search/',
+        include('haystack.urls')
+        ),
 ]
